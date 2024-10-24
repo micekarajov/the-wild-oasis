@@ -36,25 +36,26 @@ function CabinTable() {
         data: cabins,
         error,
     } = useQuery({
-        queryKey: ["cabin"],
+        queryKey: ["cabins"],
         queryFn: getCabins,
     });
 
     if (isLoading) return <Spinner />;
 
     return (
-        <Table>
-            <TableHeader>
+        <Table role="table">
+            <TableHeader role="row">
                 <div></div>
                 <div>Cabin</div>
                 <div>Capacity</div>
                 <div>Price</div>
                 <div>Discount</div>
                 <div></div>
-                {cabins.map((cabin) => (
-                    <CabinRow cabin={cabin} key={cabin.id} />
-                ))}
             </TableHeader>
+
+            {cabins.map((cabin) => (
+                <CabinRow cabin={cabin} key={cabin.id} />
+            ))}
         </Table>
     );
 }
