@@ -23,7 +23,7 @@ function CabinTableOperations() {
                         label: "Sort by price (low first)",
                     },
                     {
-                        value: "regularPrice-asc",
+                        value: "regularPrice-desc",
                         label: "Sort by price (high first)",
                     },
                     {
