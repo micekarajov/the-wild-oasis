@@ -1,4 +1,3 @@
-import { useSearchParams } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { useUrl } from "../hooks/useUrl";
 
@@ -17,7 +16,7 @@ const FilterButton = styled.button`
     border: none;
 
     ${(props) =>
-        props.active &&
+        props.active === "active" &&
         css`
             background-color: var(--color-brand-600);
             color: var(--color-brand-50);
