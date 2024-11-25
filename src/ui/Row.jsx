@@ -4,10 +4,10 @@ const Row = styled.div`
     display: flex;
 
     ${(props) =>
-        props.type === "hotizontal" &&
+        props.type === "horizontal" &&
         css`
             justify-content: space-between;
-            align-item: center;
+            align-items: center;
         `}
 
     ${(props) =>
